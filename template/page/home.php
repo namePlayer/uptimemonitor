@@ -15,6 +15,8 @@
 
     <div class="container mt-3">
 
+        <?php var_dump($accountSource->userIsAdmin()); ?>
+
     </div>
 
     <script src="<?= $requestedPath ?>/assets/bootstrap.bundle.min.js"></script>
