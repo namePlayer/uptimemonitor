@@ -17,6 +17,19 @@
 CREATE DATABASE IF NOT EXISTS `uptimemonitor` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
 USE `uptimemonitor`;
 
+-- Exportiere Struktur von Tabelle uptimemonitor.account
+CREATE TABLE IF NOT EXISTS `account` (
+  `account_id` int(11) NOT NULL AUTO_INCREMENT,
+  `email` text NOT NULL DEFAULT '',
+  `password` text NOT NULL DEFAULT '',
+  `firstname` text NOT NULL DEFAULT '',
+  `lastname` text NOT NULL DEFAULT '',
+  `registered` int(11) NOT NULL DEFAULT 0,
+  `active` enum('true','false') NOT NULL DEFAULT 'false',
+  `type` enum('ROOT','ADMIN','USER') NOT NULL DEFAULT 'USER',
+  PRIMARY KEY (`account_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4;
+
 -- Daten Export vom Benutzer nicht ausgewählt
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
